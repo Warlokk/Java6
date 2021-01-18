@@ -5,9 +5,11 @@ public class Main {
         int bonusCost = 100;
         int minTransactionForBonus = 1000;
         int bonus;
-        if (transaction>=minTransactionForBonus) {
-            bonus = transaction/bonusCost;
-        } else bonus = 0;
+        if (transaction >= minTransactionForBonus) {
+            bonus = transaction / bonusCost;
+        } else {
+            bonus = 0;
+        }
         balance = balance + transaction + bonus;
         System.out.println("Начислено бонусов: " + bonus);
         System.out.println("Итоговый баланс: " + balance);
